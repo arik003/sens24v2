@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SENSASI 2024</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
+  </head>
+  <body>
+    <nav class="bg-black lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-50">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://semnasti.hmtiudinus.org/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img id="site-logo" src="/assets/images/logo-h700.png" data-retina="/assets/images/logo-h700.png" class="h-8" alt="Flowbite Logo">
+      </a>
+      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <a href="https://forms.gle/SzKwDvKpn2frZFfk9" target="_blank" rel="noopener noreferrer">
+              <button type="button" class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center bg-[#713ABE] hover:bg-[#5B0888] focus:ring-[#3E1C76]">
+                Dapatkan Tiket
+              </button>
+            </a>                  
+                          
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+          <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-black">
+              <li class="nav-item">
+                  <a href="#beranda" onclick="smoothScroll(event)" class="block py-2 px-3 md:p-0 rounded md:hover:text-[#713ABE] text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">Beranda</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#pembicara" onclick="smoothScroll(event)" class="block py-2 px-3 md:p-0 rounded md:hover:text-[#713ABE] text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">Pembicara</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#faq" onclick="smoothScroll(event)" class="block py-2 px-3 md:p-0 rounded md:hover:text-[#713ABE] text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">FaQ</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#contact" onclick="smoothScroll(event)" class="block py-2 px-3 md:p-0 rounded md:hover:text-[#713ABE] text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">Hubungi Kami</a>
+              </li>
+          </ul>                
+      </div>
+      </div>
+  </nav>
+    <section
+      class="bg-[#1A4162] bg-cover bg-center"
+      style="background-image: url('/public/img/bgassets2.svg')"
+    >
+      <div
+        class="py-20 px-4 mx-auto max-w-screen-xl text-center lg:py-28 z-10 relative"
+      >
+        <h1
+          class="mb-4 lg:mb-2 text-xl font-bold tracking-tight leading-none md:text-2xl lg:text-2xl text-white border-solid border-4 border-white rounded-full w-fit mx-auto px-8 py-2"
+        >
+          HMSISFO UDINUS
+        </h1>
+        <h1
+          class="mb-4 lg:mb-2 text-xl font-medium tracking-tight leading-none md:text-2xl lg:text-xl text-white border-solid"
+        >
+          Proudly Present
+        </h1>
+        <h1
+          class="mb-4 text-4xl font-semibold tracking-tight leading-none sm:text-3xl md:text-4xl lg:text-6xl text-white"
+        >
+          Seminar Nasional
+        </h1>
+        <h1
+          class="mb-4 text-4xl font-semibold tracking-tight leading-none sm:text-3xl md:text-4xl lg:text-6xl text-white"
+        >
+          Sistem Informasi 2024
+        </h1>
+
+        <h1
+          class="mb-4 text-3xl font-light tracking-tight leading-none md:text-4xl lg:text-3xl text-white"
+        >
+          "Strategi Perencanaan Karir dan Adaptabilitas di Era Tech Winter"
+        </h1>
+        <p class="text-white font-normal text-lg ">27 JUNI  |   GEDUNG E3 UDINUS  |  SEMARANG</p>
+          
+        
+        <h1 class="leading-none text-white mt-16 text-4xl font-medium">See you in</h1>
+        <div class="mt-4 text-center">
+          <div
+            class="flex items-center justify-center px-5 py-5"
+            x-data="beer()"
+            x-init="start()"
+          >
+            <div
+              class="text-8xl text-center flex w-full items-center justify-center"
+            >
+              
+              <div class="w-36 mx-1 p-2 bg-[#E6D9C6] text-[#1A4162] rounded-lg">
+                <div class="leading-none font-bold" x-text="days">22</div>
+                <div class="uppercase text-sm leading-none">Days</div>
+              </div>
+              <!-- <div class="w-24 mx-1 p-2 bg-purple-800 text-white rounded-lg">
+                <div class="leading-none" x-text="hours">00</div>
+                <div class="uppercase text-sm leading-none">Hours</div>
+              </div>
+              <div class="w-24 mx-1 p-2 bg-purple-800 text-white rounded-lg">
+                <div class="leading-none" x-text="minutes">54</div>
+                <div class="uppercase text-sm leading-none">Minutes</div>
+              </div>
+              <div class="w-24 mx-1 p-2 bg-purple-800 text-white rounded-lg">
+                <div class="leading-none" x-text="seconds">37</div>
+                <div class="uppercase text-sm leading-none">Seconds</div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#121111] relative">
+      <div
+        class="flex justify-center items-center flex-col py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-12 z-10 relative"
+      >
+        <h1
+          class="mb-6 mt-4 text-xl font-semibold tracking-tight leading-none md:text-2xl lg:text-3xl text-white"
+        >
+          Tentang SENSASI
+        </h1>
+        <p class="mx-auto lg:mx-40 mb-4 text-gray-200" style="font-weight: 300">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus eum
+          praesentium cupiditate porro facilis eaque necessitatibus, inventore
+          dolorum culpa temporibus adipisci maiores sunt tempore, delectus iure
+          repudiandae, vel incidunt dignissimos consequatur reiciendis.
+        </p>
+      </div>
+    </section>
+    
+    <section class="bg-[#121111] relative">
+      <div
+        class="flex justify-center items-center flex-col py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-12 z-10 relative"
+      >
+        <h1
+          class="mb-6 mt-4 text-xl font-semibold tracking-tight leading-none md:text-2xl lg:text-3xl text-white"
+        >
+          What is Tech Winter?
+        </h1>
+        <p class="mx-auto lg:mx-40 mb-4 text-gray-200" style="font-weight: 300">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus eum
+          praesentium cupiditate porro facilis eaque necessitatibus, inventore
+          dolorum culpa temporibus adipisci maiores sunt tempore, delectus iure
+          repudiandae, vel incidunt dignissimos consequatur reiciendis.
+        </p>
+      </div>
+    </section>
+    <section class="bg-[#1A4162] pb-24" >
+      <div class="py-16 px-4 mx-auto max-w-screen-xl lg:py-20 z-10 relative mt-8" id="pembicara">
+          <h1 class="mb-2 text-xl text-center font-semibold tracking-tight leading-none md:text-2xl lg:text-3xl text-white">Pembicara</h1>
+          <h1 class="mb-4 text-sm text-center font-normal tracking-tight leading-none md:text-md lg:text-lg text-gray-400">Belajar bersama ahli yang berpengalaman</h1>
+          <div class="flex justify-around md:flex-row flex-col gap-x-4 gap-y-10">
+              
+              <div class="w-full max-w-sm rounded-3xl shadow-lg shadow-[#E6D9C5] bg-white bg-opacity-[5%] transform translate-y-4 hover:translate-y-0 duration-500 ease-in-out">
+                  <div class="flex flex-col items-center py-10">
+                      <img class="w-60 h-60 mb-3 rounded-full shadow-lg" src="/public/img/who.png" alt="">
+                      <h5 class="mb-1 text-xl font-medium text-white">Gues who?</h5>
+                      <span class="text-sm text-gray-400">Senior Machine Learning Engineer at Kredivo </span>
+                      <div class="flex mt-4 md:mt-6">
+                          <a href="https://www.linkedin.com/in/muhammad-ramadiansyah-b526912a6/" target="_blank" class="text-gray-500  hover:text-white">
+                              <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 50 50">
+                                  <path d="M 9 4 C 6.2504839 4 4 6.2504839 4 9 L 4 41 C 4 43.749516 6.2504839 46 9 46 L 41 46 C 43.749516 46 46 43.749516 46 41 L 46 9 C 46 6.2504839 43.749516 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.668484 6 44 7.3315161 44 9 L 44 41 C 44 42.668484 42.668484 44 41 44 L 9 44 C 7.3315161 44 6 42.668484 6 41 L 6 9 C 6 7.3315161 7.3315161 6 9 6 z M 14 11.011719 C 12.904779 11.011719 11.919219 11.339079 11.189453 11.953125 C 10.459687 12.567171 10.011719 13.484511 10.011719 14.466797 C 10.011719 16.333977 11.631285 17.789609 13.691406 17.933594 A 0.98809878 0.98809878 0 0 0 13.695312 17.935547 A 0.98809878 0.98809878 0 0 0 14 17.988281 C 16.27301 17.988281 17.988281 16.396083 17.988281 14.466797 A 0.98809878 0.98809878 0 0 0 17.986328 14.414062 C 17.884577 12.513831 16.190443 11.011719 14 11.011719 z M 14 12.988281 C 15.392231 12.988281 15.94197 13.610038 16.001953 14.492188 C 15.989803 15.348434 15.460091 16.011719 14 16.011719 C 12.614594 16.011719 11.988281 15.302225 11.988281 14.466797 C 11.988281 14.049083 12.140703 13.734298 12.460938 13.464844 C 12.78117 13.19539 13.295221 12.988281 14 12.988281 z M 11 19 A 1.0001 1.0001 0 0 0 10 20 L 10 39 A 1.0001 1.0001 0 0 0 11 40 L 17 40 A 1.0001 1.0001 0 0 0 18 39 L 18 33.134766 L 18 20 A 1.0001 1.0001 0 0 0 17 19 L 11 19 z M 20 19 A 1.0001 1.0001 0 0 0 19 20 L 19 39 A 1.0001 1.0001 0 0 0 20 40 L 26 40 A 1.0001 1.0001 0 0 0 27 39 L 27 29 C 27 28.170333 27.226394 27.345035 27.625 26.804688 C 28.023606 26.264339 28.526466 25.940057 29.482422 25.957031 C 30.468166 25.973981 30.989999 26.311669 31.384766 26.841797 C 31.779532 27.371924 32 28.166667 32 29 L 32 39 A 1.0001 1.0001 0 0 0 33 40 L 39 40 A 1.0001 1.0001 0 0 0 40 39 L 40 28.261719 C 40 25.300181 39.122788 22.95433 37.619141 21.367188 C 36.115493 19.780044 34.024172 19 31.8125 19 C 29.710483 19 28.110853 19.704889 27 20.423828 L 27 20 A 1.0001 1.0001 0 0 0 26 19 L 20 19 z M 12 21 L 16 21 L 16 33.134766 L 16 38 L 12 38 L 12 21 z M 21 21 L 25 21 L 25 22.560547 A 1.0001 1.0001 0 0 0 26.798828 23.162109 C 26.798828 23.162109 28.369194 21 31.8125 21 C 33.565828 21 35.069366 21.582581 36.167969 22.742188 C 37.266572 23.901794 38 25.688257 38 28.261719 L 38 38 L 34 38 L 34 29 C 34 27.833333 33.720468 26.627107 32.990234 25.646484 C 32.260001 24.665862 31.031834 23.983076 29.517578 23.957031 C 27.995534 23.930001 26.747519 24.626988 26.015625 25.619141 C 25.283731 26.611293 25 27.829667 25 29 L 25 38 L 21 38 L 21 21 z"></path>
+                              </svg>
+                              <span class="sr-only">LinkedIn page</span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="w-full max-w-sm rounded-3xl shadow-lg shadow-[#E6D9C5] bg-white bg-opacity-[5%] transform translate-y-4 hover:translate-y-0 duration-500 ease-in-out">
+                  <div class="flex flex-col items-center py-10">
+                      <img class="w-60 h-60 mb-3 rounded-full shadow-lg" src="/assets/images/khoderi.svg" alt="">
+                      <h5 class="mb-1 text-xl font-medium text-white">Muhamad Khoderi</h5>
+                      <span class="text-sm text-gray-400 text-center">IT Specialist Data Management at PT Bank Central Asia, Tbk.</span>
+                      <div class="flex mt-4 md:mt-6">
+                          <a href="https://www.linkedin.com/in/muhamad-khoderi-02134b142/" target="_blank" class="text-gray-500  hover:text-white">
+                              <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 50 50">
+                                  <path d="M 9 4 C 6.2504839 4 4 6.2504839 4 9 L 4 41 C 4 43.749516 6.2504839 46 9 46 L 41 46 C 43.749516 46 46 43.749516 46 41 L 46 9 C 46 6.2504839 43.749516 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.668484 6 44 7.3315161 44 9 L 44 41 C 44 42.668484 42.668484 44 41 44 L 9 44 C 7.3315161 44 6 42.668484 6 41 L 6 9 C 6 7.3315161 7.3315161 6 9 6 z M 14 11.011719 C 12.904779 11.011719 11.919219 11.339079 11.189453 11.953125 C 10.459687 12.567171 10.011719 13.484511 10.011719 14.466797 C 10.011719 16.333977 11.631285 17.789609 13.691406 17.933594 A 0.98809878 0.98809878 0 0 0 13.695312 17.935547 A 0.98809878 0.98809878 0 0 0 14 17.988281 C 16.27301 17.988281 17.988281 16.396083 17.988281 14.466797 A 0.98809878 0.98809878 0 0 0 17.986328 14.414062 C 17.884577 12.513831 16.190443 11.011719 14 11.011719 z M 14 12.988281 C 15.392231 12.988281 15.94197 13.610038 16.001953 14.492188 C 15.989803 15.348434 15.460091 16.011719 14 16.011719 C 12.614594 16.011719 11.988281 15.302225 11.988281 14.466797 C 11.988281 14.049083 12.140703 13.734298 12.460938 13.464844 C 12.78117 13.19539 13.295221 12.988281 14 12.988281 z M 11 19 A 1.0001 1.0001 0 0 0 10 20 L 10 39 A 1.0001 1.0001 0 0 0 11 40 L 17 40 A 1.0001 1.0001 0 0 0 18 39 L 18 33.134766 L 18 20 A 1.0001 1.0001 0 0 0 17 19 L 11 19 z M 20 19 A 1.0001 1.0001 0 0 0 19 20 L 19 39 A 1.0001 1.0001 0 0 0 20 40 L 26 40 A 1.0001 1.0001 0 0 0 27 39 L 27 29 C 27 28.170333 27.226394 27.345035 27.625 26.804688 C 28.023606 26.264339 28.526466 25.940057 29.482422 25.957031 C 30.468166 25.973981 30.989999 26.311669 31.384766 26.841797 C 31.779532 27.371924 32 28.166667 32 29 L 32 39 A 1.0001 1.0001 0 0 0 33 40 L 39 40 A 1.0001 1.0001 0 0 0 40 39 L 40 28.261719 C 40 25.300181 39.122788 22.95433 37.619141 21.367188 C 36.115493 19.780044 34.024172 19 31.8125 19 C 29.710483 19 28.110853 19.704889 27 20.423828 L 27 20 A 1.0001 1.0001 0 0 0 26 19 L 20 19 z M 12 21 L 16 21 L 16 33.134766 L 16 38 L 12 38 L 12 21 z M 21 21 L 25 21 L 25 22.560547 A 1.0001 1.0001 0 0 0 26.798828 23.162109 C 26.798828 23.162109 28.369194 21 31.8125 21 C 33.565828 21 35.069366 21.582581 36.167969 22.742188 C 37.266572 23.901794 38 25.688257 38 28.261719 L 38 38 L 34 38 L 34 29 C 34 27.833333 33.720468 26.627107 32.990234 25.646484 C 32.260001 24.665862 31.031834 23.983076 29.517578 23.957031 C 27.995534 23.930001 26.747519 24.626988 26.015625 25.619141 C 25.283731 26.611293 25 27.829667 25 29 L 25 38 L 21 38 L 21 21 z"></path>
+                              </svg>
+                              <span class="sr-only">LinkedIn page</span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+    <section class="bg-[#1A4162] bg-cover bg-center h-8" style="background-image: url('/public/img/line.png')">
+      <div
+        class="flex justify-center items-center flex-col py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-12 z-10 relative"
+      >
+      </div>
+    </section>
+    <section class="bg-[#1A4162] relative">
+      <div class="flex justify-center items-center flex-col py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-12 z-10 relative">
+        <h1 class="mb-6 mt-4 font-semibold tracking-tight leading-none text-4xl lg:text-8xl md:text-4xl text-white">
+          Grab it Fast!
+        </h1>
+      </div>
+    </section>
+    
+    <!-- <section class="bg-[#1A4162]">
+      <div class="py-16 px-4 mx-auto max-w-screen-xl lg:py-20 z-10 relative">
+        <div class="grid lg:grid-cols-2 gap-10">
+          <div class="hidden sm:block">
+            <h1
+              class="mb-4 text-4xl font-medium tracking-tight leading-none md:text-6xl lg:text-6xl text-white text-right "
+            >
+            Don't Miss It!
+            </h1>
+            <h1
+              class="mb-4 text-4xl font-medium tracking-tight leading-none md:text-8xl lg:text-8xl text-white text-right "
+            >
+            Miss
+            </h1>
+            <h1
+              class="mb-4 text-4xl font-medium tracking-tight leading-none md:text-8xl lg:text-8xl text-white text-right "
+            >
+            It!
+            </h1>
+          </div>
+          <div>
+            <ol class="relative border-s border-purple-600">
+              <li class="mb-10 ms-4">
+                <div
+                  class="absolute w-3 h-3 bg-purple-500 rounded-full mt-1.5 -start-1.5 border border-white"
+                ></div>
+                <time
+                  class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                  >May 2024</time
+                >
+                <h3 class="text-xl font-semibold text-purple-500">Presale</h3>
+                <p
+                  class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
+                >
+                  Kesempatan kedua untuk kamu mendapatkan harga yang cukup
+                  terjangkau
+                </p>
+              </li>
+              <li class="mb-10 ms-4">
+                <div
+                  class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-black"
+                ></div>
+                <time
+                  class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                  >May 2024</time
+                >
+                <h3 class="text-lg font-semibold text-white">Reguler</h3>
+                <p
+                  class="text-base font-normal text-gray-500 dark:text-gray-400"
+                >
+                  Yah sayang sekali kalian terlewat untuk presale akan tetapi
+                  jangan khawatir karena kalian masih dapat mendaftar dengan
+                  harga normal
+                </p>
+              </li>
+              <li class="ms-4">
+                <div
+                  class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-black"
+                ></div>
+                <time
+                  class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                  >June 2024</time
+                >
+                <h3 class="text-lg font-semibold text-white">SENSASI 2024</h3>
+                <p
+                  class="text-base font-normal text-gray-500 dark:text-gray-400"
+                >
+                  Hari penyelengaraan Seminar Nasional yang kalian
+                  nanti-nantikan
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section class="bg-[#1A4162]">
+      <div class="py-16 px-4 mx-auto max-w-screen-xl lg:py-20 z-10 relative">
+        <div>
+          <ol class="relative border-s border-purple-600 sm:flex sm:space-x-8 sm:border-0">
+            <li class="mb-10 ms-4 sm:mb-0 sm:flex-1">
+              <div class="absolute w-3 h-3 bg-purple-500 rounded-full mt-1.5 -start-1.5 border border-white sm:static sm:mx-auto"></div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">May 2024</time>
+              <h3 class="text-xl font-semibold text-purple-500">Presale</h3>
+              <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Kesempatan kedua untuk kamu mendapatkan harga yang cukup terjangkau</p>
+            </li>
+            <li class="mb-10 ms-4 sm:mb-0 sm:flex-1">
+              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-black sm:static sm:mx-auto"></div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">May 2024</time>
+              <h3 class="text-lg font-semibold text-white">Reguler</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">Yah sayang sekali kalian terlewat untuk presale akan tetapi jangan khawatir karena kalian masih dapat mendaftar dengan harga normal</p>
+            </li>
+            <li class="ms-4 sm:flex-1">
+              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-black sm:static sm:mx-auto"></div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">June 2024</time>
+              <h3 class="text-lg font-semibold text-white">SENSASI 2024</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">Hari penyelengaraan Seminar Nasional yang kalian nanti-nantikan</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section class="bg-black ">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 z-10 relative">
+          <h1 class="mb-4 text-xl font-bold text-center tracking-tight leading-none md:text-2xl lg:text-3xl text-white">Daftar Harga Reguler</h1>
+          <div class="flex flex-col items-center justify-center  space-y-[5rem] lg:flex-row lg:items-stretch lg:space-x-[5rem] lg:space-y-0" x-show="kategory" x-transition:enter="transition ease-out duration-900" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-100">
+              <div class="flex flex-col shadow-lg shadow-purple-600 w-[350px] max-w-sm p-12 space-y-6 bg-white bg-opacity-[5%] text-white rounded-[50px] drop-shadow-pinkShadow transform translate-y-4 hover:translate-y-0 duration-500 ease-in-out">
+                  <!-- Stage -->
+                  
+                  <div class="flex flex-row items-center justify-center gap-2 pb-2 text-3xl font-normal text-center border-b">
+                      <div class="flex text-2xl font-bold">
+                          <span>Mahasiswa Udinus</span>
+                      </div>
+                  </div>
+                  <!-- Price -->
+                  <div class="flex-shrink-0 text-center">
+                      <span class="text-4xl font-extrabold tracking-tight text-transparent bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text ">Rp. 50.000</span>
+                  </div>
+                  <!-- Additional Info -->
+                  <div class="text-center">
+                      <ul class="text-lg">
+                          <li class="mb-2">Untuk 1 tiket</li>
+                          <li class="mb-2">E-Sertifikat</li>
+                          <li class="mb-2">Seminar Kit</li>
+                          <li class="mb-2">Doorprize</li>
+                          <li class="mb-2">Giveaway</li>
+                          <li class="mb-2">Knowledge About AI</li>
+                          <li class="mb-2">Relasi/Network</li>
+                          <li class="mb-2">Snack &amp; Lunch</li>
+                      </ul>
+                  </div>
+                  <button id="dapatkanTiket" type="button" class="focus:outline-none text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-purple-600 hover:bg-[#5B0888] focus:ring-purple-900">Pesan tiket</button>
+              </div>
+              <div class="flex flex-col shadow-lg shadow-purple-600 w-[350px] max-w-sm p-12 space-y-6 bg-white bg-opacity-[5%] text-white rounded-[50px] drop-shadow-pinkShadow transform translate-y-4 hover:translate-y-0 duration-500 ease-in-out">
+                  <!-- Stage -->
+                  
+                  <div class="flex flex-row items-center justify-center gap-2 pb-2 text-3xl font-normal text-center border-b">
+                      <div class="flex text-4xl font-bold">
+                          <span>Umum</span>
+                      </div>
+                      <div class="text-3xl font-bold"></div>
+                  </div>
+                  <!-- Price -->
+                  <div class="flex-shrink-0 text-center">
+                      <span class="text-4xl font-extrabold tracking-tight text-transparent bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text ">Rp. 60.000</span>
+                  </div>
+                  <!-- Additional Info -->
+                  <div class="text-center">
+                      <ul class="text-lg">
+                          <li class="mb-2">Untuk 1 tiket</li>
+                          <li class="mb-2">E-Sertifikat</li>
+                          <li class="mb-2">Seminar Kit</li>
+                          <li class="mb-2">Doorprize</li>
+                          <li class="mb-2">Giveaway</li>
+                          <li class="mb-2">Knowledge About AI</li>
+                          <li class="mb-2">Relasi/Network</li>
+                          <li class="mb-2">Snack &amp; Lunch</li>
+                      </ul>
+                  </div>
+                  <button id="dapatkanTikets" type="button" class="focus:outline-none text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-purple-600 hover:bg-[#5B0888] focus:ring-purple-900">Pesan tiket</button>
+              </div>
+              
+          </div>
+      </div>
+  </section>
+    
+
+    <section class="bg-black flex items-center justify-center">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-12 z-10 relative">
+          <h1 class="mb-10 text-xl font-semibold tracking-tight leading-none md:text-2xl lg:text-3xl text-white">Disponsori oleh</h1>
+          <div class="flex justify-center gap-4 flex-wrap">
+              <div class="bg-white border border-gray-200 flex-shrink-0 rounded-lg shadow ">
+                  <img class="rounded-t-lg sm:w-44 md:w-64 lg:w-72 h-32 object-contain p-2" src="/assets/images/sponsor/gifa-catering.png" alt="Gifa Catering">
+              </div>
+              <div class="bg-white border border-gray-200 flex-shrink-0 rounded-lg shadow">
+                  <img class="rounded-t-lg sm:w-44 md:w-64 lg:w-72 h-32 object-contain p-2" src="/assets/images/sponsor/swara-ht.PNG" alt="Swara HT">
+              </div>
+              <div class="bg-white border border-gray-200 flex-shrink-0 rounded-lg shadow">
+                  <img class="rounded-t-lg sm:w-44 md:w-64 lg:w-72 h-32 object-contain p-2" src="/assets/images/sponsor/lego.png" alt="Swara HT">
+              </div>
+          </div>
+      </div>
+    </section>
+    <section class="bg-black">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-12 z-10 relative">
+          <h1 class="mb-10 text-xl font-semibold tracking-tight leading-none md:text-2xl lg:text-3xl text-white">Media Partner</h1>
+          <div x-data="" x-init="$nextTick(() => {
+              let ul1 = $refs.logos1;
+              let ul2 = $refs.logos2;
+              let ul3 = $refs.logos3;
+              ul1.insertAdjacentHTML('afterend', ul1.outerHTML);
+              ul2.insertAdjacentHTML('afterend', ul2.outerHTML);
+              ul3.insertAdjacentHTML('afterend', ul3.outerHTML);
+              ul1.nextSibling.setAttribute('aria-hidden', 'true');
+              ul2.nextSibling.setAttribute('aria-hidden', 'true');
+              ul3.nextSibling.setAttribute('aria-hidden', 'true');
+          })" class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+              <ul x-ref="logos1" class="flex items-center justify-center md:justify-start [&amp;_li]:mx-8 [&amp;_img]:max-w-none animate-infinite-scroll">
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/bemfik.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/infoungaran.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/hmjm.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/doscom.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/hmjti-uin.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+              </ul><ul x-ref="logos1" class="flex items-center justify-center md:justify-start [&amp;_li]:mx-8 [&amp;_img]:max-w-none animate-infinite-scroll">
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/bemfik.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/infoungaran.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/hmjm.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/doscom.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/hmjti-uin.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+              </ul><ul x-ref="logos1" class="flex items-center justify-center md:justify-start [&amp;_li]:mx-8 [&amp;_img]:max-w-none animate-infinite-scroll">
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/bemfik.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/infoungaran.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/hmjm.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/doscom.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+                  <li class="p-3 px-10 mx-5 bg-white rounded-xl">
+                      <img src="/assets/images/medpart/hmjti-uin.png" class="w-20 md:w-24 sm:w-16 h-20 md:h-24 sm:h-16 object-contain">
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </section>
+    <script>
+      function beer() {
+        return {
+          seconds: "00",
+          minutes: "00",
+          hours: "00",
+          days: "00",
+          distance: 0,
+          countdown: null,
+          beerTime: new Date("June 08, 2024 00:00:00").getTime(),
+          now: new Date().getTime(),
+          start: function () {
+            this.countdown = setInterval(() => {
+              this.now = new Date().getTime();
+              this.distance = this.beerTime - this.now;
+
+              this.days = this.padNum(
+                Math.floor(this.distance / (1000 * 60 * 60 * 24))
+              );
+              this.hours = this.padNum(
+                Math.floor(
+                  (this.distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                )
+              );
+              this.minutes = this.padNum(
+                Math.floor((this.distance % (1000 * 60 * 60)) / (1000 * 60))
+              );
+              this.seconds = this.padNum(
+                Math.floor((this.distance % (1000 * 60)) / 1000)
+              );
+
+              if (this.distance < 0) {
+                clearInterval(this.countdown);
+                this.days = "00";
+                this.hours = "00";
+                this.minutes = "00";
+                this.seconds = "00";
+              }
+            }, 1000);
+          },
+          padNum: function (num) {
+            return String(num).padStart(2, "0");
+          },
+        };
+      }
+    </script>
+    
+  </body>
+</html>
